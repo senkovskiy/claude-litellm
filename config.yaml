@@ -1,0 +1,30 @@
+model_list:
+  - model_name: claude-opus-5-5
+    litellm_params:
+      model: openai/claude-opus-5-5
+      api_base: os.environ/API_BASE
+      api_key: os.environ/API_KEY
+
+  - model_name: claude-falble-5
+    litellm_params:
+      model: openai/claude-falble-5
+      api_base: os.environ/API_BASE
+      api_key: os.environ/API_KEY
+
+  - model_name: gpt-5.4-ptu
+    litellm_params:
+      model: openai/gpt-5.4-ptu
+      api_base: os.environ/API_BASE
+      api_key: os.environ/API_KEY
+
+  - model_name: gpt-5.6-terra-ptu
+    litellm_params:
+      model: openai/gpt-5.6-terra-ptu
+      api_base: os.environ/API_BASE
+      api_key: os.environ/API_KEY
+
+general_settings:
+  master_key: os.environ/LITELLM_MASTER_KEY
+
+litellm_settings:
+  drop_params: true # openai does not support parameters: ['thinking', 'context_management']
